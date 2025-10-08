@@ -1,17 +1,42 @@
-# Archivos temporales de Windows
+# Archivos del sistema
+.DS_Store
 Thumbs.db
 Desktop.ini
 
-# Archivos del sistema
+# Archivos temporales y logs
 *.log
 *.tmp
 
-# Carpetas de editores o IDEs
+# Carpetas de editores / IDEs
 .vscode/
 .idea/
 *.suo
 *.user
-*.DS_Store
+*.swp
+*.bak
 
-# Node modules si más adelante agregás herramientas
+# Node modules (si agregás Node.js o npm)
 node_modules/
+
+# Archivos de compilación / distribución (dist, build)
+dist/
+build/
+
+# Archivos de prueba o backups
+*.backup
+*.zip
+*.rar
+
+# Archivos de imagen grandes no necesarios para el repo
+*.jpeg
+*.jpg
+*.png
+*.gif
+
+# Archivos generados por navegadores o caché
+*.cache
+*.localstorage
+
+# Archivos de sistema de Windows / Linux
+ehthumbs.db
+*.lnk
