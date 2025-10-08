@@ -1,0 +1,17 @@
+# Archivos temporales de Windows
+Thumbs.db
+Desktop.ini
+
+# Archivos del sistema
+*.log
+*.tmp
+
+# Carpetas de editores o IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+*.DS_Store
+
+# Node modules si más adelante agregás herramientas
+node_modules/
