@@ -1,75 +1,102 @@
+:root {
+  --bg: #f4f6f9;
+  --text: #333;
+  --primary: #007bff;
+  --card: #fff;
+}
+
+body.dark {
+  --bg: #181a1b;
+  --text: #eee;
+  --primary: #1e90ff;
+  --card: #242526;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+#darkToggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
 }
 
 form {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+form input,
+form select,
+form button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #007BFF;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+form button {
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  flex: none;
 }
 
-button:hover {
-    background-color: #0056b3;
+.filters {
+  margin-bottom: 1rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+.filters button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
 }
 
-li {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
-    border-bottom: 1px solid #eee;
+#taskList {
+  list-style: none;
+  padding: 0;
 }
 
-li.completed {
-    text-decoration: line-through;
-    color: #888;
+#taskList li {
+  background: var(--card);
+  margin-bottom: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-li button {
-    background-color: transparent;
-    color: red;
-    border: none;
-    cursor: pointer;
+#calendar {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 600px;
 }

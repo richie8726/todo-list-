@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List Pro</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Mi ToDo List</h1>
-        <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="Agregar nueva tarea..." required>
-            <button type="submit">Agregar</button>
-        </form>
-        <ul id="todo-list"></ul>
-    </div>
+  <header>
+    <h1>ToDo List Pro</h1>
+    <button id="darkToggle">🌙</button>
+  </header>
 
-    <script src="js/app.js"></script>
+  <main>
+    <!-- Sección ToDo -->
+    <section id="todo-section">
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Nueva tarea..." required>
+        <select id="categorySelect">
+          <option value="general">General</option>
+          <option value="trabajo">Trabajo</option>
+          <option value="personal">Personal</option>
+        </select>
+        <input type="date" id="dateInput">
+        <input type="time" id="timeInput">
+        <button type="submit">Agregar</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all">Todas</button>
+        <button data-filter="completed">Completadas</button>
+        <button data-filter="pending">Pendientes</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Sección Calendario -->
+    <section id="calendar-section">
+      <div id="calendar"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
